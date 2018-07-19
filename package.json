@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "configuration management",
   "main": "src/app.js",
+  "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/cerka/mod-logger.git"
+  },
   "scripts": {
     "test": "NODE_ENV=test jest",
     "check": "npm test && $(npm bin)/eslint src test"
