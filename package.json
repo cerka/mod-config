@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "configuration management",
   "main": "src/app.js",
-  "repository" : {
-      "type" : "git",
-      "url" : "git@github.com:cerka/mod-config.git"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cerka/mod-config.git"
   },
   "scripts": {
     "test": "NODE_ENV=test jest",
