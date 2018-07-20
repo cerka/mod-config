@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "repository" : {
       "type" : "git",
-      "url" : "https://github.com/cerka/mod-logger.git"
+      "url" : "git@github.com:cerka/mod-config.git"
   },
   "scripts": {
     "test": "NODE_ENV=test jest",
