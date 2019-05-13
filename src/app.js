@@ -8,7 +8,6 @@ const yaml = require('node-yaml');
 const debug = require('debug')('mod:config');
 const nodeEnv = require('node-env-configuration');
 
-
 class Configuration {
     constructor() {
         this.instance = null;
@@ -39,6 +38,8 @@ class Configuration {
                 })
             ,conf);
         }
+        // this._env = Object.freeze(this._env);
+        this._env = this.deepFreeze(this._env);
     }
 
     readYaml(file) {
@@ -64,6 +65,16 @@ class Configuration {
             return this._instance;
         }
     }
+
+    deepFreeze(object) {
+        let propNames = Object.getOwnPropertyNames(object);
+        for (let name of propNames) {
+           let value = object[name];
+           object[name] = value && typeof value === "object" ?  
+                                this.deepFreeze(value) : value;
+        }
+        return Object.freeze(object);
+     }
 }
 
 module.exports = Configuration.getInstance()._env;
