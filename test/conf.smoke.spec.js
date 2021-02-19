@@ -29,5 +29,5 @@ describe('[SMOKE]', () => {
             conf.tata.toto = "shouldnoteither";
         }).toThrow();
         expect(conf).toEqual({"tata": {"toto": "tutu"}, "tutu": "flop"});
-    })
+    });
 });

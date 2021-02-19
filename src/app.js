@@ -38,7 +38,6 @@ class Configuration {
                 })
             ,conf);
         }
-        // this._env = Object.freeze(this._env);
         this._env = this.deepFreeze(this._env);
     }
 
@@ -70,8 +69,7 @@ class Configuration {
         let propNames = Object.getOwnPropertyNames(object);
         for (let name of propNames) {
            let value = object[name];
-           object[name] = value && typeof value === "object" ?  
-                                this.deepFreeze(value) : value;
+           object[name] = ((value && typeof value === "object") ? this.deepFreeze(value) : value);
         }
         return Object.freeze(object);
      }
