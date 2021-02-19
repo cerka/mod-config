@@ -18,11 +18,11 @@
   "author": "Abel Goichon",
   "license": "ISC",
   "dependencies": {
-    "node-env-configuration": "1.0.3",
+    "node-env-configuration": "^1.0.3",
     "node-yaml": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "5.1.0",
+    "eslint": "^7.20.0",
     "jest": "^26.6.3"
   },
   "jest": {
